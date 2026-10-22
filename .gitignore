@@ -14,3 +14,7 @@ Thumbs.db
 
 # Dependencies
 node_modules/
+dist/
+
+README.example.md
+recommendations/
