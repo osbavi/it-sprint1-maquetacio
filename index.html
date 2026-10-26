@@ -3,10 +3,661 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Tittle name</title>
-    <!-- Aquí likeas tu html con tu css -->
+    <title>Petopia - Sitio web de adopción de mascotas</title>
+    <meta
+      name="description"
+      content="Sitio web para adoptar mascotas. Dale una segunda oportunidad a un perro o gato que busca un hogar lleno de amor" />
+
+    <!-- OPEN GRAPH (SEO) https://ogp.me/ Facebook, WhatsApp, LinkedIn, etc. Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Petopia - Sitio web de adopción de mascotas" />
+    <meta
+      property="og:description"
+      content="Sitio web para adoptar mascotas. Dale una segunda oportunidad a un perro o gato que busca un hogar lleno de amor." />
+    <meta property="og:url" content="https://tusitioweb.com" />
+    <meta property="og:image" content="images/og-portada.jpg" />
+    <!--1200 x 630 píxeles-->
+    <meta
+      property="og:image:alt"
+      content="Petopia - Sitio web de adopción de mascotas" />
+
+    <!-- Twitter Meta Tags (Twitter Cards) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Petopia - Sitio web de adopción de mascotas" />
+    <meta
+      name="twitter:description"
+      content="Sitio web para adoptar mascotas. Dale una segunda oportunidad a un perro o gato que busca un hogar lleno de amor." />
+    <meta property="twitter:domain" content="tusitioweb.com" />
+    <meta property="twitter:url" content="https://tusitioweb.com" />
+    <meta name="twitter:image" content="images/og-portada.jpg" />
+    <!--1200 x 630 píxeles-->
+    <meta
+      name="twitter:image:alt"
+      content="Petopia - Sitio web de adopción de mascotas" />
+
+    <!-- Altres elements per SEO  -->
+    <link rel="alternate" href="https://tusitioweb.com/en" hreflang="es-GB" />
+    <link rel="canonical" href="https://tusitioweb.com" />
+
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#1C4A2A" />
+
+    <link rel="icon" type="image/svg+xml" href="./src/assets/icons/Favicon.svg" />
+
+    <!-- Enlace a tu archivo CSS -->
+    <link rel="stylesheet" href="./src/css/style.css" />
   </head>
+
   <body>
-    <!-- Aquí va tu esqueleto HTML -->
+    <!-- 1. LA CABECERA (Bloque: header-site) -->
+    <header class="header-site">
+    <!-- 1. Logotipo con enlace a inicio -->
+      <div class="header-site__brand">
+        <a href="index.html" class="header-site__logo-link">
+          <img
+            src="./src/assets/icons/LogoNavbar.svg"
+            alt="Petopia - Ir a la página de inicio"
+            class="header-site__logo-img" 
+            width="36"
+            height="36"/>
+        </a>
+      </div>
+    
+      <!-- Contenedor de acciones móviles (Lupa + Hamburguesa) -->
+      <div class="header-site__mobile-actions">
+        <!-- Botón de búsqueda (Lupa) -->
+        <button 
+          type="button" 
+          class="header-site__search-toggle" 
+          aria-label="Abrir buscador">
+          <span aria-hidden="true">🔍</span>
+        </button>
+
+        <!-- Botón de menú hamburguesa -->
+        <button 
+          type="button" 
+          class="header-site__menu-toggle" 
+          aria-expanded="false" 
+          aria-controls="primary-nav" 
+          aria-label="Abrir menú de navegación">
+          <span class="header-site__hamburger-line" aria-hidden="true"></span>
+        </button>
+      </div>
+
+    <!-- Navegación principal -->
+  <nav id="primary-nav" class="header-site__nav" aria-label="Navegación principal">
+    <ul class="header-site__menu">
+      <li class="header-site__item">
+        <a href="#" class="header-site__link header-site__link--active" aria-current="page">Inicio</a>
+      </li>
+      <li class="header-site__item">
+        <a href="#" class="header-site__link">Adopta</a>
+      </li>
+      <li class="header-site__item">
+        <a href="#" class="header-site__link">Participa</a>
+      </li>
+      <li class="header-site__item">
+        <a href="#" class="header-site__link">Blog</a>
+      </li>
+      <li class="header-site__item">
+        <a href="#" class="header-site__link">Sobre nosotros</a>
+      </li>
+    </ul>
+  </nav>
+
+    <!-- Botones de Autenticación (Escritorio) -->
+    <div class="header-site__auth">
+      <a href="#" class="header-site__btn header-site__btn--login">Iniciar sesión</a>
+      <a href="#" class="header-site__btn header-site__btn--register">Registrarse</a>
+    </div>
+    </header>
+
+    <!-- 2. CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+      <!-- 1. Hero Section -->
+      <section class="hero">
+        <div class="hero__container">
+          <!-- Contenido superior: Texto y Imagen principal -->
+          <div class="hero__top">
+            <div class="hero__content">
+              <h1 class="hero__title">
+                Abraza el amor sin fin con tu mejor amigo peludo.
+              </h1>
+              <p class="hero__description">
+                Disfruta de un amor infinito con tu nuevo mejor amigo peludo. ¡Adopta
+                ahora y empieza a crear recuerdos inolvidables juntos!
+              </p>
+            </div>
+
+            <div class="hero__media">
+              <img
+                src="./src/assets/img/HeroImage.webp"
+                alt="Mujer joven sonriendo alegremente mientras abraza a su nuevo perro adoptado"
+                class="hero__img" 
+                width="728"
+                height="911"/>
+            </div>
+          </div>
+
+          <!-- Contenido inferior: Tarjeta de búsqueda / Filtros -->
+          <div class="hero__search-wrapper">
+            <form class="hero__form" role="search" action="#" method="GET">
+              <h2 class="hero__form-title">Encuentra a tu nuevo mejor amigo</h2>
+
+              <div class="hero__form-grid">
+                <!-- Campo 1: Localización -->
+                <div class="hero__field">
+                  <label for="location" class="hero__label">Tu ubicación</label>
+                  <select id="location" name="location" class="hero__select">
+                    <option value="" disabled selected>Barcelona, España</option>
+                    <option value="barcelona-gracia">Bcn - Gracia</option>
+                    <option value="barcelona-santandreu">Bcn - Sant Andreu</option>
+                    <option value="barcelona-horta">Bcn - Horta-Guinardo</option>
+                  </select>
+                </div>
+
+                <!-- Campo 2: Tipo de mascota -->
+                <div class="hero__field">
+                  <label for="pet-type" class="hero__label">Tipo de mascota</label>
+                  <select id="pet-type" name="pet_type" class="hero__select">
+                    <option value="" disabled selected>Perro</option>
+                    <option value="dog">Perro</option>
+                    <option value="cat">Gato</option>
+                    <option value="rabbit">Conejo</option>
+                  </select>
+                </div>
+
+                <!-- Campo 3: Raza -->
+                <div class="hero__field">
+                  <label for="breed" class="hero__label">Raza</label>
+                  <select id="breed" name="breed" class="hero__select">
+                    <option value="" disabled selected>Todo</option>
+                    <option value="all">Todo</option>
+                    <option value="labrador">Labrador</option>
+                    <option value="mestizo">Mestizo</option>
+                  </select>
+                </div>
+
+                <!-- Campo 4: Género -->
+                <div class="hero__field">
+                  <label for="gender" class="hero__label">Genero</label>
+                  <select id="gender" name="gender" class="hero__select">
+                    <option value="" disabled selected>Hembra</option>
+                    <option value="female">Hembra</option>
+                    <option value="male">Macho</option>
+                  </select>
+                </div>
+
+                <!-- Campo 5: Edad -->
+                <div class="hero__field">
+                  <label for="age" class="hero__label">Edad</label>
+                  <select id="age" name="age" class="hero__select">
+                    <option value="" disabled selected>De 1 a 3 años de edad</option>
+                    <option value="puppy">Cachorro (&lt; 1 año)</option>
+                    <option value="young">De 1 a 3 años de edad</option>
+                    <option value="adult">Adulto (&gt; 3 años)</option>
+                  </select>
+                </div>
+
+                <!-- Botón de envío -->
+                <div class="hero__field hero__field--submit">
+                  <button type="submit" class="hero__submit-btn">Search</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. Explore Pet Section -->
+      <section class="explore-pets">
+        <div class="explore-pets__container">
+          <!-- Cuadrícula de fotos de mascotas (Izquierda) (Grid o catálogo de mascotas) -->
+          <div class="explore-pets__gallery">
+            <div class="explore-pets__card-img">
+              <img
+                src="./src/assets/img/ExplorePetSection01.webp"
+                alt="Perro ovejero australiano sonriendo alegremente al aire libre"
+                class="explore-pets__img"
+                width="318"
+                height="318" />
+            </div>
+            <div class="explore-pets__card-img">
+              <img
+                src="./src/assets/img/ExplorePetSection02.webp"
+                alt="Adorable conejo gris sobre un fondo de naturaleza verde"
+                class="explore-pets__img" 
+                width="318"
+                height="318"/>
+            </div>
+            <div class="explore-pets__card-img">
+              <img
+                src="./src/assets/img/ExplorePetSection03.webp"
+                alt="Pequeño hámster curioso asomándose en un entorno acogedor"
+                class="explore-pets__img"
+                width="318"
+                height="318"/>
+            </div>
+            <div class="explore-pets__card-img">
+              <img
+                src="./src/assets/img/ExplorePetSection04.webp"
+                alt="Gato peludo de color naranja mirando fijamente a la cámara"
+                class="explore-pets__img" 
+                width="318"
+                height="318"/>
+            </div>
+          </div>
+
+          <!-- Bloque de texto e información (Derecha) -->
+          <div class="explore-pets__content">
+            <h2 class="explore-pets__title">
+              ¡Descubre qué amigo peludo te queda mejor!
+            </h2>
+            <p class="explore-pets__description">
+              Dé un paseo por nuestra familia de mascotas y descubra al compañero
+              ideal que se adapte perfectamente a su estilo de vida y personalidad.
+              Tanto si busca un amigo juguetón para aventuras al aire libre como un
+              compañero cariñoso para noches acogedoras en casa, nuestra variada
+              selección de mascotas le espera.
+            </p>
+            <div class="explore-pets__action">
+              <a href="#" class="explore-pets__btn">
+                Explorar Más
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. How to Adopt Section -->
+      <section class="how-to-adopt">
+        <div class="how-to-adopt__container">
+          <!-- Bloque izquierdo: Títulos, descripción y pasos -->
+          <div class="how-to-adopt__content">
+            <h2 class="how-to-adopt__title">Cómo adoptar a tu nuevo amigo</h2>
+            <p class="how-to-adopt__description">
+              ¿Listo para llevar a casa a tu nuevo mejor amigo? ¡Explora, conoce,
+              adopta y comienza hoy mismo tu viaje de amor y alegría!
+            </p>
+
+            <!-- Lista de pasos secuenciales -->
+            <ol class="how-to-adopt__steps">
+              <!-- Paso 1 -->
+              <li class="how-to-adopt__step-card">
+                <div class="how-to-adopt__icon-wrapper" aria-hidden="true">
+                  <img
+                    src="./src/assets/icons/HowToAdoptYourNewFriendVector01.svg"
+                    alt=""
+                    class="how-to-adopt__icon" 
+                    width="32"
+                    height="32"/>
+                </div>
+                <h3 class="how-to-adopt__step-title">Encuentra tu pareja</h3>
+                <p class="how-to-adopt__step-text">
+                  Explora nuestra página web y encuentra la mascota perfecta que te
+                  robará el corazón.
+                </p>
+              </li>
+
+              <!-- Paso 2 -->
+              <li class="how-to-adopt__step-card">
+                <div class="how-to-adopt__icon-wrapper" aria-hidden="true">
+                  <img
+                    src="./src/assets/icons/HowToAdoptYourNewFriendVector02.svg"
+                    alt=""
+                    class="how-to-adopt__icon"
+                    width="32"
+                    height="32"/>
+                </div>
+                <h3 class="how-to-adopt__step-title">Contacta y Conoce</h3>
+                <p class="how-to-adopt__step-text">
+                  Contacta con el refugio para conocer a la mascota y ver si hay
+                  buena compatibilidad.
+                </p>
+              </li>
+
+              <!-- Paso 3 -->
+              <li class="how-to-adopt__step-card">
+                <div class="how-to-adopt__icon-wrapper" aria-hidden="true">
+                  <img
+                    src="./src/assets/icons/HowToAdoptYourNewFriendVector03.svg"
+                    alt=""
+                    class="how-to-adopt__icon"
+                    width="32"
+                    height="32"/>
+                </div>
+                <h3 class="how-to-adopt__step-title">Documentación</h3>
+                <p class="how-to-adopt__step-text">
+                  Complete la solicitud y abone la tarifa para finalizar la adopción.
+                </p>
+              </li>
+
+              <!-- Paso 4 -->
+              <li class="how-to-adopt__step-card">
+                <div class="how-to-adopt__icon-wrapper" aria-hidden="true">
+                  <img
+                    src="./src/assets/icons/HowToAdoptYourNewFriendVector04.svg"
+                    alt=""
+                    class="how-to-adopt__icon" 
+                    width="32"
+                    height="32"/>
+                </div>
+                <h3 class="how-to-adopt__step-title">Llévalos a casa</h3>
+                <p class="how-to-adopt__step-text">
+                  ¡Llévate a casa a tu nuevo amigo peludo y empiecen a crear
+                  recuerdos juntos!
+                </p>
+              </li>
+            </ol>
+          </div>
+
+          <!-- Bloque derecho: Imagen ilustrativa -->
+          <div class="how-to-adopt__media">
+            <img
+              src="./src/assets/img/HowToAdoptSection.webp"
+              alt="Gato atigrado descansando plácidamente mientras recibe caricias en un hogar"
+              class="how-to-adopt__img" 
+              width="620"
+              height="740"/>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. About Community Section -->
+      <section class="about-community">
+        <div class="about-community__container">
+           <!-- Parte superior: Información y Estadísticas -->
+          <div class="about-community__top">
+            <!-- Bloque de texto izquierdo -->
+            <div class="about-community__info">
+              <h2 class="about-community__title">
+                En Petopia, nos dedicamos a rescatar y encontrar un nuevo hogar para las mascotas necesitadas.
+              </h2>
+              <p class="about-community__description">
+                Garantizamos que encuentren el amor que merecen. Con la compasión y el sentido de comunidad como pilares fundamentales, nuestro objetivo es encontrar la familia perfecta para cada mascota, fomentando lazos de amor para toda la vida.</p>
+              <div class="about-community__action">
+                <a href="#" class="about-community__btn">
+                  Únase a nuestra comunidad
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Bloque de métricas/estadísticas derecho -->
+            <ul class="about-community__stats">
+              <li class="about-community__stat-item">
+                <span class="about-community__stat-number">200+</span>
+                <span class="about-community__stat-label">Refugios</span>
+              </li>
+              <li class="about-community__stat-item">
+                <span class="about-community__stat-number">2.5K</span>
+                <span class="about-community__stat-label">Voluntarios</span>
+              </li>
+              <li class="about-community__stat-item">
+                <span class="about-community__stat-number">5.8K</span>
+                <span class="about-community__stat-label">mascotas adoptadas</span>
+              </li>
+              <li class="about-community__stat-item">
+                <span class="about-community__stat-number">25K</span>
+                <span class="about-community__stat-label">Horas de Voluntariado</span>
+              </li>
+            </ul>
+          </div>
+
+            <!-- Parte inferior: Galería de imágenes de la comunidad -->
+          <div class="about-community__gallery">
+            <div class="about-community__card-img">
+              <img 
+                src="./src/assets/img/AboutCommunitySection01.webp" 
+                alt="Persona sonriendo mientras acaricia cariñosamente a un perro dorado al aire libre" 
+                class="about-community__img"
+                width="652"
+                height="439"/>
+            </div>
+            <div class="about-community__card-img">
+              <img 
+                src="./src/assets/img/AboutCommunitySection02.webp" 
+                alt="Perro feliz siendo acariciado por varias personas en un parque" 
+                class="about-community__img"
+                width="652"
+                height="439"/>
+            </div>
+        </div>
+      </section>
+
+      <!-- 5. Donate Section -->
+      <section class="donate">
+        <div class="donate__container">
+          <!-- Cabecera de la sección -->
+          <div class="donate__header">
+            <h2 class="donate__title">Dona y salva vidas</h2>
+            <p class="donate__description">
+              Tu donación puede marcar la diferencia y salvar vidas. Únete a nuestra misión de rescatar, cuidar y encontrar un hogar a mascotas necesitadas. ¡Contribuye hoy mismo!
+            </p>
+          </div>
+
+          <!-- Cuadrícula de opciones de donación -->
+          <div class="donate__grid">
+            <!-- Opción 1: Donación única -->
+            <article class="donate__card">
+              <div class="donate__icon-wrapper" aria-hidden="true">
+                <img src="./src/assets/icons/DonateSectionVector01.svg" alt="" class="donate__icon" width="32" height="32" />
+              </div>
+              <h3 class="donate__card-title">Donación única</h3>
+              <p class="donate__card-text">
+                Haz una donación única para apoyar nuestros esfuerzos continuos en el rescate y cuidado de mascotas necesitadas.
+              </p>
+              <a href="#" class="donate__btn">
+                Donar ahora <span aria-hidden="true">↗</span>
+              </a>
+            </article>
+
+            <!-- Opción 2: Donación mensual (Destacada / Featured) -->
+            <article class="donate__card donate__card--featured">
+              <div class="donate__icon-wrapper" aria-hidden="true">
+                <img src="./src/assets/icons/DonateSectionVector02.svg" alt="" class="donate__icon" width="32" height="32 />
+              </div>
+              <h3 class="donate__card-title">Compromiso mensual</h3>
+              <p class="donate__card-text">
+                Conviértete en donante mensual y bríndanos tu apoyo constante para ayudarnos a salvar más vidas cada mes.
+              </p>
+              <a href="#" class="donate__btn donate__btn--light">
+                Donar ahora <span aria-hidden="true">↗</span>
+              </a>
+            </article>
+
+            <!-- Opción 3: Patrocinar una mascota -->
+            <article class="donate__card">
+              <div class="donate__icon-wrapper" aria-hidden="true">
+                <img src="./src/assets/icons/DonateSectionVector03.svg" alt="" class="donate__icon" width="32" height="32 />
+              </div>
+              <h3 class="donate__card-title">Apadrina una mascota</h3>
+              <p class="donate__card-text">
+                Apadrina a una mascota a nuestro cuidado y contribuye directamente a cubrir sus necesidades hasta que encuentre un hogar definitivo.
+              </p>
+              <a href="#" class="donate__btn">
+                Donar ahora <span aria-hidden="true">↗</span>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Volunteer Section -->
+      <section class="volunteer">
+        <div class="volunteer__container">
+          <!-- Encabezado de la sección (Título + Descripción) -->
+          <div class="volunteer__header">
+            <h2 class="volunteer__title">Foco voluntario</h2>
+            <p class="volunteer__description">
+              Descubre las inspiradoras historias de nuestros voluntarios, que destacan sus conmovedoras experiencias y el impacto de su dedicación. Únete a nosotros para celebrar su compromiso de marcar la diferencia en la vida de las mascotas necesitadas.
+            </p>
+          </div>
+
+          <!-- Galería de imágenes de historias de voluntarios -->
+          <div class="volunteer__gallery">
+            <div class="volunteer__card-img">
+              <img 
+                src="./src/assets/img/VolunteerSection01.webp" 
+                alt="Dos voluntarios sonrientes acariciando amorosamente a un perro en un refugio" 
+                class="volunteer__img"
+                width="509" 
+                height="314"/>
+            </div>
+            <div class="volunteer__card-img">
+              <img 
+                src="./src/assets/img/VolunteerSection02.webp" 
+                alt="Voluntaria pasando tiempo al aire libre con un perro rescatado" 
+                class="volunteer__img"
+                width="509" 
+                height="314"/>
+            </div>
+            <div class="volunteer__card-img">
+              <img 
+                src="./src/assets/img/VolunteerSection03.webp" 
+                alt="Voluntaria abrazando alegremente a un perro labrador" 
+                class="volunteer__img" 
+                width="509" 
+                height="314"/>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. Subscribe Section (Incluye formulario de newsletter) -->
+      <section class="subscribe">
+        <div class="subscribe__container">
+          
+          <!-- Lado izquierdo: Imagen -->
+          <div class="subscribe__media">
+            <img 
+              src="./src/assets/img/SubscribeSection.webp" 
+              alt="Mascotas rescatadas junto a sus cuidadores en un ambiente cálido" 
+              class="subscribe__img" 
+              width="617" 
+              height="581"/>
+          </div>
+
+          <!-- Lado derecho: Tarjeta de suscripción -->
+          <div class="subscribe__content">
+            <h2 class="subscribe__title">
+              ¡Suscríbete a nuestro boletín para recibir actualizaciones y noticias sobre mascotas!
+            </h2>
+            <p class="subscribe__description">
+              ¡Mantente al día con las últimas novedades! Suscríbete a nuestro boletín para recibir noticias, anuncios de eventos e historias conmovedoras directamente en tu correo electrónico.
+            </p>
+
+            <!-- Formulario de Newsletter -->
+            <form class="subscribe__form" action="#" method="POST" novalidate>
+              <!-- Label accesible para lectores de pantalla -->
+              <label for="newsletter-email" class="subscribe__label visually-hidden">
+                Correo electrónico para el boletín
+              </label>
+
+              <div class="subscribe__input-group">
+                <span class="subscribe__input-icon" aria-hidden="true">✉</span>
+                <input 
+                  type="email" 
+                  id="newsletter-email" 
+                  name="email" 
+                  class="subscribe__input" 
+                  placeholder="Type your email here..." 
+                  autocomplete="email"
+                  required 
+                />
+              </div>
+
+              <button type="submit" class="subscribe__btn">
+                Suscríbete ahora
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <!-- 3. PIE DE PÁGINA (Footer) -->
+    <footer class="footer-site">
+      <div class="footer-site__container">
+        <div class="footer-site__brand">
+          <img
+            src="./src/assets/icons/LogoFooter.svg"
+            alt="Petopia"
+            class="footer-site__logo" 
+            width="24"
+            height="24"/>
+          <span class="footer-site__name">Petopia</span>
+        </div>
+
+        <nav
+          class="footer-site__nav"
+          aria-label="Navegación secundaría del pie de página">
+          <div class="footer-site__col">
+            <h3 class="footer-site__title">Adopción</h3>
+            <ul class="footer-site__list">
+              <li><a href="#" class="footer-site__link">Mascotas disponibles</a></li>
+              <li><a href="#" class="footer-site__link">Proceso de adopción</a></li>
+              <li>
+                <a href="#" class="footer-site__link">FAQs sobre la adopción</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-site__col">
+            <h3 class="footer-site__title">¡Participa!</h3>
+            <ul class="footer-site__list">
+              <li>
+                <a href="#" class="footer-site__link"
+                  >Oportunidades de voluntariado</a
+                >
+              </li>
+              <li>
+                <a href="#" class="footer-site__link">Perfil del voluntario</a>
+              </li>
+              <li><a href="#" class="footer-site__link">Formas de donar</a></li>
+            </ul>
+          </div>
+          <div class="footer-site__col">
+            <h3 class="footer-site__title">Blog</h3>
+            <ul class="footer-site__list">
+              <li>
+                <a href="#" class="footer-site__link">Últimas publicaciones</a>
+              </li>
+              <li>
+                <a href="#" class="footer-site__link"
+                  >Publicaciones de la comunidad</a
+                >
+              </li>
+              <li><a href="#" class="footer-site__link">Temas populares</a></li>
+            </ul>
+          </div>
+          <div class="footer-site__col">
+            <h3 class="footer-site__title">Empresa</h3>
+            <ul class="footer-site__list">
+              <li><a href="#" class="footer-site__link">Sobre nosotros</a></li>
+              <li><a href="#" class="footer-site__link">Contáctanos</a></li>
+              <li>
+                <a href="#" class="footer-site__link">Política de privacidad</a>
+              </li>
+              <li><a href="#" class="footer-site__link">Términos de servicio</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="footer-site__bottom">
+        <p class="footer-site__copy">
+          &copy; Petopia 2026. Todos los derechos reservados.
+        </p>
+        <ul class="footer-site__socials" aria-label="Redes sociales">
+          <!-- Iconos sociales -->
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>

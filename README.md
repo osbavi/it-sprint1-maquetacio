@@ -22,15 +22,13 @@ Este proyecto es una página de aterrizaje (landing page) para una protectora de
 └── README.md
 ```
 
-Además este proyecto tiene una estrategia particular de ramas de git, por lo que cada iteración la he desarrollado en una rama de función (feature-branch) separada. Cada rama mantiene un archivo README.md independiente con instrucciones específicas relacionadas con las tecnologías utilizadas en esa iteración.
-En este caso desarrollo la seccion hero
+Además este proyecto tiene una estrategia particular de ramas de git, por lo que cada iteración la he desarrollado en una rama de función (feature-branch) separada. Cada rama mantiene un archivo README.md independiente con instrucciones específicas relacionadas con las tecnologías utilizadas en esa iteración. En este caso desarrollo la seccion hero
 
 ```text
 /
 └── main
     └── develop
         ├── vainilla-iteration
-            ├── feature/hero
 ```
 
 ## Tecnologias usadas
